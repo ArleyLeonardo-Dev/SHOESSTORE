@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOES STORE</title>
+    <link rel="icon" href="/imagenes/iconos/IconPrincipal.png" type="image/x-icon">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-image: url("imagenes/bacgrounds/backgroundloggin.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            Font-family: Arial, sans-serif;
+            transition: 1s;
+        }
+        body::before {
+            content: ''; /* Necesario para el pseudo-elemento */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7); /* Color negro con transparencia */
+        }
+
+        #loggin{
+            z-index: 99;
+            width: 80%;
+            height: 43vh;
+            border: 3px solid white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1{
+            color: white;
+            text-shadow: 0px 0px 10px white;
+            font-size: 250%;
+        }
+        hr{
+            width: 100%;
+            height: 2px;
+            background-color: white;
+        }
+        label{
+            text-shadow: 0px 0px 10px white;
+            font-size: 150%;
+            color: white;
+            margin-bottom: 2%;
+            align-self: flex-start;
+            margin-left: 3%;
+        }
+        #userlabel{
+
+            margin-top: 10%;
+        }
+        #passwordlabel{
+            margin-top: 5%;
+        }
+        input{
+            Font-family: Consolas, monaco, monospace;
+            padding-bottom: 2%;
+            color: white;
+            caret-color: white;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            width: 90%;
+            margin-right: 4%;
+            text-shadow: 0px 0px 10px white;
+
+        }
+
+        button{
+            margin-top: 5%;
+            Font-family: Consolas, monaco, monospace;
+            font-weight: 1000;
+            color: black;
+            border: none;
+            width: 30%;
+            padding: 3%;
+            border-radius: 20px;
+            transition: 0.5s;
+        }
+        button:hover{
+            scale: 110%;
+        }
+
+        @media (min-width:600px) and (max-width:1000px) {
+            #loggin{
+                width: 50%;
+                height: 65vh;
+                padding-bottom: 3vh;
+            }
+        }
+        @media (min-width:1001px) {
+            #loggin{
+                width: 35%;
+                height: 70vh;
+                padding-bottom: 3vh;
+            }
+        }
+        @media (max-height:690px){
+            #loggin{
+                height: 57vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="loggin">
+        <h1>SHOES STORE</h1>
+        <hr>
+        <label for="user" id="userlabel">User:</label>
+        <input type="text" id="user">
+        <label for="password" id="passwordlabel">Password:</label>
+        <input type="password" id="password">
+        <button onclick="window.location.href='presentacion.html'">ENVIAR</button>
+        
+    </div>
+</body>
+</html>
